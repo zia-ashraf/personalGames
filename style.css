@@ -4,11 +4,59 @@ body {
   margin: 0px;
   font-family: "Roboto";
   text-align: center;
-  background: #333;
+  /* background-color: #333; */
 }
 main {
   background-color: #333;
+  height: fit-content;
 }
+
+/* navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0px 2rem;
+  margin-top: 30px;
+  width: 70%;
+  /* color: #fc997c; */
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(32, 31, 31);
+  border-radius: 5px;
+}
+#navbar h1 {
+  margin: auto 0px;
+  transition: transform 0.2s;
+}
+#navbar h1:hover {
+  transform: scale(1.25);
+  color: #9c19e0;
+}
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: auto 0px;
+}
+#navbar ul li {
+  margin: auto;
+}
+#navbar ul li a {
+  margin: auto 1rem;
+  padding: 0.55rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#navbar ul li a:hover {
+  background-color: #333;
+  border-radius: 3px;
+  color: #9c19e0;
+  /* font-weight: bold; */
+}
+
 #container {
   color: white;
 
@@ -27,10 +75,7 @@ main {
 }
 
 /* game list */
-#game-list {
-  margin-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
+
 #game-list > div {
   width: 70%;
   height: 450px;
@@ -51,7 +96,8 @@ main {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: rgb(36, 35, 35);
 }
-#game-list > div > div > div {
+
+#game-list > div > div > .games-desc {
   background-color: #333;
   width: 100%;
   height: 70%;
@@ -60,6 +106,32 @@ main {
   border-radius: 5px;
   padding: 15px 15px;
 }
+
+#game-list > div > div > .playnow > button {
+  padding: 3px 5px;
+  margin: 0px auto;
+  margin-top: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #df007c;
+  border: #df007c solid 2px;
+  font-size: 25px;
+  border-radius: 5px;
+  background-color: rgb(36, 35, 35);
+  width: 10rem;
+}
+/*  */
+#game-list:nth-child(2) > div > div > .playnow > button {
+  color: #fd2d00;
+}
+#game-list > div > div > .playnow > button:hover {
+  animation-name: grow;
+  animation-duration: 1s;
+  background-color: #df007c;
+  color: black;
+  width: 11rem;
+  height: 3.5rem;
+}
+
 #game-list > div > div > div > p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -90,6 +162,10 @@ main {
 #game-list :nth-child(5) > div > h1 {
   background-color: #ff4545;
 }
+/* check this */
+#game-list :nth-child(5) {
+  margin-bottom: 40px;
+}
 
 /* text animation */
 * {
@@ -117,7 +193,13 @@ main {
   position: relative;
   display: inline-block;
   font-size: 3rem;
-  background: linear-gradient(to bottom, blue, blue 63%, #fff 60%, #fff 100%);
+  background: linear-gradient(
+    to bottom,
+    #9c19e0,
+    #9c19e0 64%,
+    #fff 60%,
+    #fff 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -136,7 +218,7 @@ main {
   left: 0;
   right: 0;
   height: 15px;
-  background: #rgb(32, 31, 31);
+  background: rgb(32, 31, 31);
   bottom: 9px;
   transition: all 0.2s ease-out;
 }

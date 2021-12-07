@@ -1,0 +1,23 @@
+#grid {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px black;
+}
+#grid div {
+  height: 40px;
+  width: 40px;
+}
+.snake {
+  background-color: greenyellow;
+}
+
+#startButton {
+  height: 50px;
+  width: 100px;
+}
+
+.food {
+  background-color: red;
+}
