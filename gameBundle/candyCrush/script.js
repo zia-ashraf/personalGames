@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   fillcolors();
+
   let validMoves;
   let IdOfSquareEeingDragged;
   let IdOfSquareBeingReplaced;
@@ -53,6 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function dragStart() {
+    if (moves > 5) {
+      document.querySelector(".line1").innerHTML = "Game Over";
+      document.querySelector(".line2").innerHTML = "Your score:" + score;
+      document.querySelector(".icon").classList.add("makeVisible");
+      return;
+    }
     IdOfSquareEeingDragged = this.id;
     // console.log(this.style.backgroundColor);
     console.log(this.id, "dragStart");

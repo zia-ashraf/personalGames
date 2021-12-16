@@ -1,12 +1,51 @@
 .grid {
-  background-color: blue;
-  width: 560px;
-  height: 560px;
+  width: 370px;
+  height: 300px;
   display: flex;
+  margin: auto;
   flex-wrap: wrap;
+  padding-left: 30px;
 }
-
+.desc {
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  padding-top: 1.5rem;
+  font-size: 30px;
+  color: white;
+}
+.makeVisible {
+  display: block;
+}
+.card {
+  width: fit-content;
+  background-color: #064663;
+  padding: 40px 30px;
+  padding-top: 10px;
+  height: fit-content;
+  margin: auto;
+  color: white;
+  border-radius: 5px;
+  border: white 2px solid;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #041c32;
+}
+.card h1 {
+  line-height: 15px;
+  text-align: center;
+}
+.card h2 {
+  line-height: 25px;
+}
 .grid div {
-  height: 70px;
-  width: 70px;
+  height: 40px;
+  width: 40px;
+  border-radius: 2px;
+  border: #041c32 solid 1px;
 }

@@ -9,6 +9,13 @@ const clickHandler = (e) => {
   userChoice.innerHTML = "User Choice:" + e.target.innerHTML;
   const randomVal = Math.floor(Math.random() * 3);
   computerChoice.innerHTML = "Computer Choice:" + choices[randomVal];
+  if (e.target.innerHTML === choices[randomVal]) {
+    document.getElementById("result").innerHTML =
+      "Great!!! YOU WON! wanna try again ;)";
+  } else {
+    document.getElementById("result").innerHTML =
+      "BAD LUCK! Maybe next time :)";
+  }
 };
 for (let i = 0; i < choices.length; i++) {
   const btn = document.createElement("button");

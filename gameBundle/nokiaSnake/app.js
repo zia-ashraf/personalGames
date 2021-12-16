@@ -8,7 +8,7 @@ let myscore = 0;
 let direction = -1;
 let intervalDuration = 500;
 let foodId;
-let speedFactor = 0.8; //factor of increase in speed each time.
+let speedFactor = 0.5; //factor of increase in speed each time.
 for (let i = 0; i < 15 * 15; i++) {
   const square = document.createElement("div");
   grid.appendChild(square);
@@ -22,6 +22,7 @@ function startGame() {
   myscore = 0;
   intervalDuration = 500;
   speedFactor = 0.8;
+  document.getElementById("result").innerHTML = "";
   // score.innerHTML = "GAME OVER \n Your Score :" + myscore;
   console.log("here", intervalDuration);
   score.innerHTML = "Your Score :" + myscore;
@@ -40,27 +41,32 @@ function move() {
   if (snakeBody[0] + width >= width * width && direction === width) {
     // hit down
     clearInterval(snakeInterval);
-    score.innerHTML = "GAME OVER \n Your Score :" + myscore;
+    document.getElementById("result").innerHTML = "GAME OVER";
+    score.innerHTML = " Your Score :" + myscore;
     return;
   } else if (snakeBody[0] - width <= 0 && direction === -width) {
     //hit top
     clearInterval(snakeInterval);
-    score.innerHTML = "GAME OVER \n Your Score :" + myscore;
+    document.getElementById("result").innerHTML = "GAME OVER";
+    score.innerHTML = " Your Score :" + myscore;
     return;
   } else if (snakeBody[0] % width === 0 && direction === -1) {
     //hit left
     clearInterval(snakeInterval);
-    score.innerHTML = "GAME OVER \n Your Score :" + myscore;
+    document.getElementById("result").innerHTML = "GAME OVER";
+    score.innerHTML = " Your Score :" + myscore;
     return;
   } else if (snakeBody[0] % width === width - 1 && direction === 1) {
     //hit left
     clearInterval(snakeInterval);
-    score.innerHTML = "GAME OVER \n Your Score :" + myscore;
+    document.getElementById("result").innerHTML = "GAME OVER";
+    score.innerHTML = " Your Score :" + myscore;
     return;
   } else if (squares[snakeBody[0] + direction].classList.contains("snake")) {
     //it hits itself
     clearInterval(snakeInterval);
-    score.innerHTML = "GAME OVER \n Your Score :" + myscore;
+    document.getElementById("result").innerHTML = "GAME OVER";
+    score.innerHTML = " Your Score :" + myscore;
     return;
   }
   //if food is found
@@ -79,7 +85,7 @@ function move() {
   }
 
   //the snake simply moves
-  snakeBody.unshift(snakeBody[0] + direction); 
+  snakeBody.unshift(snakeBody[0] + direction);
   squares[snakeBody[0]].classList.add("snake");
   const tail = snakeBody.pop();
   squares[tail].classList.remove("snake");

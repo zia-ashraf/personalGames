@@ -1,16 +1,48 @@
 .grid {
-  width: 620px;
-  height: 620px;
+  width: 312px;
+  height: 320px;
   display: flex;
   flex-wrap: wrap;
 }
-
+.timer {
+  margin-top: 0px;
+}
 .box {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   border: solid;
 }
+.card {
+  width: fit-content;
+  background-color: #b3541e;
+  padding: 30px 30px;
+  padding-top: 15px;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 15px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5rem;
+}
 
+body {
+  background-color: #a13333;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body div {
+  padding-top: 5px;
+}
 .mole {
-  background-color: red;
+  background-color: #461111;
+}
+.header a {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  font-size: 40px;
+  color: #461111;
+  height: fit-content;
+  width: fit-content;
 }

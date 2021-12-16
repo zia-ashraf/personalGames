@@ -1,21 +1,38 @@
+.card {
+  width: fit-content;
+  height: 450px;
+  background-color: #7cd1b8;
+  padding: 30px 30px;
+  margin: auto;
+  border-radius: 15px;
+  text-align: center;
+}
+body {
+  background-color: #3e8e7e;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.card h1 {
+  line-height: 1rem;
+}
 #grid {
-  height: 600px;
-  width: 600px;
+  height: 300px;
+  width: 300px;
   display: flex;
   flex-wrap: wrap;
-  border: solid 1px black;
+  border: solid 3px black;
 }
 #grid div {
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
 }
+
 .snake {
   background-color: greenyellow;
 }
 
 #startButton {
-  height: 50px;
-  width: 100px;
+  font-size: 30px;
 }
 
 .food {

@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let movingRight = true;
   let invadersInterval;
   const deadInvaders = [];
-  let displayedScore = document.querySelector("#score");
   let score = 0;
-  displayedScore.innerHTML = score;
+
   for (
     let i = 28;
     i < 37;
@@ -66,15 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
         squares[alienInvaders[i]].classList.contains("invaders") &&
         squares[alienInvaders[i]].classList.contains("shooter")
       ) {
-        console.log("game over");
+        document.getElementById("result").innerHTML = "YOU LOSE";
         clearInterval(invadersInterval);
       }
       if (alienInvaders[i] >= width * width - width) {
-        displayedScore.innerHTML = score + "\n GAME OVER";
+        document.getElementById("result").innerHTML = "YOU LOSE";
         clearInterval(invadersInterval);
       }
       if (deadInvaders.length === alienInvaders.length) {
-        displayedScore.innerHTML = score + "\n YOU WIN";
+        document.getElementById("result").innerHTML = "YOU WIN";
         clearInterval(invadersInterval);
       }
     }
@@ -128,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         deadInvaders.push(alienInvaders.indexOf(laserId));
         score += 1;
-        displayedScore.innerHTML = score;
         // console.log(deadInvaders);
       }
     }

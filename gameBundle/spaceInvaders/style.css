@@ -1,22 +1,36 @@
 #grid {
-  height: 500px;
-  width: 500px;
-  border: solid 1px black;
+  height: 375px;
+  width: 375px;
+  background-color: #1b2735;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
 }
 
 #grid div {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   /* border: solid; */
 }
-
+.card {
+  width: fit-content;
+  background-color: #292c6d;
+  padding: 30px 30px;
+  margin: auto;
+  width: 530px;
+  border-radius: 15px;
+}
+body {
+  background-color: #161853;
+  font-family: "Courier New", Courier, monospace;
+}
 .shooter {
-  background-color: black;
+  background-color: #faedf0;
 }
 .invaders {
-  background-color: purple;
+  background-color: #9a0680;
   border-radius: 100%;
 }
 .laser {
@@ -24,4 +38,15 @@
 }
 .boom {
   background-color: red;
+}
+.icon img {
+  display: block;
+  margin: auto;
+  width: 3rem;
+  height: 3rem;
+}
+#result {
+  text-align: center;
+  line-height: 0px;
+  font-size: 30px;
 }

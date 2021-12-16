@@ -6,11 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Your Score: <span id="score"></span></h1>
-    <h1>Your Moves: <span id="moves"></span></h1>
-    <div class="grid"></div>
+    <div class="card">
+      <h1 class="line1">You have upto 25 moves!!</h1>
+
+      <h1 class="line2">Make your best score.</h1>
+      <div class="desc">
+        <h2>
+          Your Score: <span id="score"></span><br />
+          Your Moves: <span id="moves"></span>
+        </h2>
+
+        <a class="icon" href="./index.html">
+          <i class="fas fa-play-circle"></i>
+        </a>
+      </div>
+      <div class="grid"></div>
+    </div>
   </body>
 </html>
