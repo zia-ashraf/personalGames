@@ -5,6 +5,7 @@
   margin-top: 20px;
   width: 300px;
   height: 400px;
+  border-radius: 15px;
 }
 #result {
   margin-top: 25px;
@@ -15,4 +16,26 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: #97bfb4;
   text-align: center;
+}
+.display {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-img,
+.computer-img {
+  height: 3.7rem;
+  width: 3.7rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+button {
+  width: 4rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: inherit;
+  margin: 20px 5px;
+  border-radius: 4px;
 }
