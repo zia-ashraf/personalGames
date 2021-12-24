@@ -29,6 +29,7 @@ main {
 #navbar h1 {
   margin: auto 0px;
   transition: transform 0.2s;
+  padding-bottom: 8px;
 }
 #navbar h1:hover {
   transform: scale(1.25);
@@ -55,6 +56,10 @@ main {
   border-radius: 3px;
   color: #9c19e0;
   /* font-weight: bold; */
+}
+.logo-text {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 #container {
@@ -173,8 +178,36 @@ main {
 
 /* check this */
 .game-card:nth-child(2) > div > .playnow > a {
-  border: #9c19e0 solid 2px !important;
-  color: #9c19e0 !important;
+  border: #fd2d00 solid 2px !important;
+  color: #fd2d00 !important;
+}
+.game-card:nth-child(2) > div > .playnow > a:hover {
+  background-color: #fd2d00 !important;
+  color: rgb(36, 35, 35) !important;
+}
+.game-card:nth-child(3) > div > .playnow > a {
+  border: #00c5c8 solid 2px !important;
+  color: #00c5c8 !important;
+}
+.game-card:nth-child(3) > div > .playnow > a:hover {
+  background-color: #00c5c8 !important;
+  color: rgb(36, 35, 35) !important;
+}
+.game-card:nth-child(4) > div > .playnow > a {
+  border: #70e7d1 solid 2px !important;
+  color: #70e7d1 !important;
+}
+.game-card:nth-child(4) > div > .playnow > a:hover {
+  background-color: #70e7d1 !important;
+  color: rgb(36, 35, 35) !important;
+}
+.game-card:nth-child(5) > div > .playnow > a {
+  border: #ff4545 solid 2px !important;
+  color: #ff4545 !important;
+}
+.game-card:nth-child(5) > div > .playnow > a:hover {
+  background-color: #ff4545 !important;
+  color: rgb(36, 35, 35) !important;
 }
 
 /* text animation */

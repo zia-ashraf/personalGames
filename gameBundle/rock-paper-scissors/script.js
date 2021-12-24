@@ -19,7 +19,13 @@ const clickHandler = (e) => {
     choices[randomVal];
   if (parseInt(e.target.id) === randomVal) {
     document.getElementById("result").innerHTML =
-      "Great!!! YOU WON! wanna try again ;)";
+      "IT's a TIE!! wanna try again ;)";
+  } else if (parseInt(e.target.id) === 0 && randomVal === 1) {
+    document.getElementById("result").innerHTML = "YOU WON!! :)";
+  } else if (parseInt(e.target.id) === 1 && randomVal === 2) {
+    document.getElementById("result").innerHTML = "YOU WON!! :)";
+  } else if (parseInt(e.target.id) === 2 && randomVal === 0) {
+    document.getElementById("result").innerHTML = "YOU WON!! :)";
   } else {
     document.getElementById("result").innerHTML =
       "BAD LUCK! Maybe next time :)";
