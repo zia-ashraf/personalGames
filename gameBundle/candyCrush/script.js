@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function dragStart() {
-    if (moves > 5) {
+    if (moves > 25) {
       document.querySelector(".line1").innerHTML = "Game Over";
       document.querySelector(".line2").innerHTML = "Your score:" + score;
       document.querySelector(".icon").classList.add("makeVisible");
@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(this.id, "dddd");
   }
   function dragDrop() {
-    moves += 1;
     IdOfSquareBeingReplaced = this.id;
     const idofsquarebeingdraggedinInteger = parseInt(IdOfSquareEeingDragged);
     validMoves = [
@@ -91,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     if (validMoves.includes(parseInt(IdOfSquareBeingReplaced))) {
-      console.log("yeeeeeeeee");
+      moves += 1;
       const storedDraggedColor =
         squares[IdOfSquareEeingDragged].style.backgroundColor;
       squares[IdOfSquareEeingDragged].style.backgroundColor =
@@ -99,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
       squares[IdOfSquareBeingReplaced].style.backgroundColor =
         storedDraggedColor;
     }
-
-    console.log(this.id, "ddddd");
   }
 
   //check row for three matches

@@ -132,6 +132,8 @@ main {
   color: white;
   border-radius: 5px;
   padding: 15px 15px;
+  display: flex;
+  align-items: center;
 }
 
 #game-list > div > div > div > p {
@@ -312,7 +314,7 @@ footer {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   opacity: 0.8;
   border-top-right-radius: 10px;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 footer p {
   color: white;
